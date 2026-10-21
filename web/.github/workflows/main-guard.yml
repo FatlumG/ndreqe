@@ -1,0 +1,19 @@
+name: main-guard
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  only-from-dev:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Allow only PRs from dev into main
+        env:
+          HEAD_BRANCH: ${{ github.head_ref }}
+        run: |
+          if [ "$HEAD_BRANCH" != "dev" ]; then
+            echo "PRs into main must come from dev (got: $HEAD_BRANCH)"
+            exit 1
+          fi
+          echo "OK: PR comes from dev"
