@@ -1,200 +1,255 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="stylesheet" href="./css/variables.css" />
-    <link rel="stylesheet" href="./css/pages/index.css" />
+  
 
-    <title>Ndreqe</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <header class="site-header">
-      <div class="header-container">
-        <div class="logo">
-          <img src="./assets/logos/logo.svg" alt="Logo" />
-          <h1>Ndreqe</h1>
-        </div>
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/layout.css" />
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/pages/index.css" />
 
-        <nav class="main-nav">
-          <ul>
-            <li><a href="#">Shërbimet</a></li>
-            <li><a href="#">Si funksionon</a></li>
-            <li><a href="#">Për profesionistët</a></li>
-          </ul>
-        </nav>
+  <title>Ndreqe</title>
+</head>
 
-        <div class="header-actions">
-          <a href="#" class="btn-login">Kyçu</a>
-          <a href="#" class="btn-primary">Rezervo</a>
-        </div>
+<body>
+
+  <header class="site-header">
+    <div class="header-container">
+
+      <div class="logo">
+        <img src="./assets/logos/logo.svg" alt="Ndreqe" />
+        <h1>Ndreqe</h1>
       </div>
-    </header>
-   
 
-    
-    
-    <main>
-      <section
-        class="featured-professionals-section"
-        aria-labelledby="featured-professionals-title"
-      >
-        <div class="section-header">
-          <h2 class="section-title" id="featured-professionals-title">
-            Profesionistë të vlerësuar
-          </h2>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#">Shërbimet</a></li>
+          <li><a href="./si-funksionon.html">Si funksionon</a></li>
+          <li><a href="#">Për profesionistët</a></li>
+        </ul>
+      </nav>
 
-          <a href="#all-professionals" class="view-all-link">
-            Shiko të gjithë
-            <span aria-hidden="true">&rarr;</span>
+      <div class="header-actions">
+        <a href="#" class="btn-login">Kyçu</a>
+        <a href="./rezervo.html" class="btn-primary">Rezervo</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Si funksionon -->
+    <section class="how-it-works-section">
+
+      <div class="section-header">
+        <h2>Si funksionon</h2>
+        <p>Tre hapa për të gjetur shërbimin që të duhet.</p>
+      </div>
+
+      <div class="steps-container">
+
+        <article class="step-card">
+          <div class="step-card-content">
+            <span class="step-number">1</span>
+            <h3>Zgjedh shërbimin</h3>
+            <p>
+              Shkruaj çfarë të duhet dhe krahaso profesionistët.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="step-card-content">
+            <span class="step-number">2</span>
+            <h3>Rezervo orarin</h3>
+            <p>
+              Zgjedh ditën dhe orën që të përshtatet.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <div class="step-card-content">
+            <span class="step-number">3</span>
+            <h3>Puna kryhet</h3>
+            <p>
+              Profesionisti vjen në kohë dhe paguan pasi të përfundojë puna.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Profesionistë të vlerësuar -->
+    <section
+      class="featured-professionals-section"
+      aria-labelledby="featured-professionals-title"
+    >
+
+      <div class="section-header">
+        <h2 class="section-title" id="featured-professionals-title">
+          Profesionistë të vlerësuar
+        </h2>
+
+        <a href="#all-professionals" class="view-all-link">
+          Shiko të gjithë
+          <span aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+
+      <div class="professionals-grid">
+
+        <article class="professional-card">
+          <figure class="professional-profile-figure">
+            <img src="./assets/div.png" alt="Foto e profesionistit" />
+          </figure>
+
+          <div class="professional-details-header">
+            <h3 class="professional-name">Arben Krasniqi</h3>
+            <span class="verification-badge">
+              <img src="./assets/icons/Vector.svg" alt="Tick icon" />
+              I verifikuar
+            </span>
+          </div>
+
+          <p class="professional-service-location">
+            Elektricist &middot; Prishtinë
+          </p>
+
+          <div class="professional-rating"
+            aria-label="Vlerësimi 4.9 nga 5, bazuar në 128 vlerësime">
+            <img src="./assets/icons/star.svg" alt="Rating Star" />
+            <span class="rating-score">4.9</span>
+            <span class="rating-count">(128 vlerësime)</span>
+          </div>
+
+          <div class="professional-card-footer">
+            <p class="professional-price">
+              nga <data class="price-amount" value="15">15€</data>
+            </p>
+
+            <button
+              class="professional-booking-button"
+              type="button"
+              aria-label="Rezervo Arben Krasniqin"
+            >
+              Rezervo
+            </button>
+          </div>
+        </article>
+
+        <article class="professional-card">
+          <figure class="professional-profile-figure">
+            <img src="./assets/div.png" alt="Foto e profesionistit" />
+          </figure>
+
+          <div class="professional-details-header">
+            <h3 class="professional-name">Drita Berisha</h3>
+            <span class="verification-badge">
+              <img src="./assets/icons/Vector.svg" alt="Tick icon" />
+              E verifikuar
+            </span>
+          </div>
+
+          <p class="professional-service-location">
+            Pastrim &middot; Prizren
+          </p>
+
+          <div class="professional-rating"
+            aria-label="Vlerësimi 5.0 nga 5, bazuar në 86 vlerësime">
+            <img src="./assets/icons/star.svg" alt="Rating Star" />
+            <span class="rating-score">5.0</span>
+            <span class="rating-count">(86 vlerësime)</span>
+          </div>
+
+          <div class="professional-card-footer">
+            <p class="professional-price">
+              nga <data class="price-amount" value="12">12€</data>
+            </p>
+
+            <button
+              class="professional-booking-button"
+              type="button"
+              aria-label="Rezervo Drita Berishën"
+            >
+              Rezervo
+            </button>
+          </div>
+        </article>
+
+        <article class="professional-card">
+          <figure class="professional-profile-figure">
+            <img src="./assets/div.png" alt="Foto e profesionistit" />
+          </figure>
+
+          <div class="professional-details-header">
+            <h3 class="professional-name">Faton Gashi</h3>
+            <span class="verification-badge">
+              <img src="./assets/icons/Vector.svg" alt="Tick icon" />
+              I verifikuar
+            </span>
+          </div>
+
+          <p class="professional-service-location">
+            Hidraulik &middot; Pejë
+          </p>
+
+          <div class="professional-rating"
+            aria-label="Vlerësimi 4.8 nga 5, bazuar në 203 vlerësime">
+            <img src="./assets/icons/star.svg" alt="Rating Star" />
+            <span class="rating-score">4.8</span>
+            <span class="rating-count">(203 vlerësime)</span>
+          </div>
+
+          <div class="professional-card-footer">
+            <p class="professional-price">
+              nga <data class="price-amount" value="18">18€</data>
+            </p>
+
+            <button
+              class="professional-booking-button"
+              type="button"
+              aria-label="Rezervo Faton Gashin"
+            >
+              Rezervo
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+
+        <p>&copy; 2026 Ndreqe</p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <img src="./assets/icons/Facebook.svg" alt="Facebook" />
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <img src="./assets/icons/Instagram.svg" alt="Instagram" />
+          </a>
+
+          <a href="#" aria-label="LinkedIn">
+            <img src="./assets/icons/LinkedIn.svg" alt="LinkedIn" />
           </a>
         </div>
 
-        <div class="professionals-grid">
-          <article class="professional-card">
-            <figure class="professional-profile-figure">
-              <img src="./assets/div.png" alt="Foto e profesionistit" />
-            </figure>
-
-            <div class="professional-details-header">
-              <h3 class="professional-name">Arben Krasniqi</h3>
-              <span class="verification-badge">
-                <img src="./assets/icons/Vector.svg" alt="Tick icon" />
-                I verifikuar
-              </span>
-            </div>
-
-            <p class="professional-service-location">
-              Elektricist &middot; Prishtinë
-            </p>
-
-            <div
-              class="professional-rating"
-              aria-label="Vlerësimi 4.9 nga 5, bazuar në 128 vlerësime"
-            >
-              <img src="./assets/icons/star.svg" alt="Rating Star" />
-              <span class="rating-score">4.9</span>
-              <span class="rating-count">(128 vlerësime)</span>
-            </div>
-
-            <div class="professional-card-footer">
-              <p class="professional-price">
-                nga <data class="price-amount" value="15">15€</data>
-              </p>
-
-              <button
-                class="professional-booking-button"
-                type="button"
-                aria-label="Rezervo Arben Krasniqin"
-              >
-                Rezervo
-              </button>
-            </div>
-          </article>
-
-          <article class="professional-card">
-            <figure class="professional-profile-figure">
-              <img src="./assets/div.png" alt="Foto e profesionistit" />
-            </figure>
-
-            <div class="professional-details-header">
-              <h3 class="professional-name">Drita Berisha</h3>
-              <span class="verification-badge">
-                <img src="./assets/icons/Vector.svg" alt="Tick icon" />
-                E verifikuar
-              </span>
-            </div>
-
-            <p class="professional-service-location">
-              Pastrim &middot; Prizren
-            </p>
-
-            <div
-              class="professional-rating"
-              aria-label="Vlerësimi 5.0 nga 5, bazuar në 86 vlerësime"
-            >
-              <img src="./assets/icons/star.svg" alt="Rating Star" />
-              <span class="rating-score">5.0</span>
-              <span class="rating-count">(86 vlerësime)</span>
-            </div>
-
-            <div class="professional-card-footer">
-              <p class="professional-price">
-                nga <data class="price-amount" value="12">12€</data>
-              </p>
-
-              <button
-                class="professional-booking-button"
-                type="button"
-                aria-label="Rezervo Drita Berishën"
-              >
-                Rezervo
-              </button>
-            </div>
-          </article>
-
-          <article class="professional-card">
-            <figure class="professional-profile-figure">
-              <img src="./assets/div.png" alt="Foto e profesionistit" />
-            </figure>
-
-            <div class="professional-details-header">
-              <h3 class="professional-name">Faton Gashi</h3>
-              <span class="verification-badge">
-                <img src="./assets/icons/Vector.svg" alt="Tick icon" />
-                I verifikuar
-              </span>
-            </div>
-
-            <p class="professional-service-location">Hidraulik &middot; Pejë</p>
-
-            <div
-              class="professional-rating"
-              aria-label="Vlerësimi 4.8 nga 5, bazuar në 203 vlerësime"
-            >
-              <img src="./assets/icons/star.svg" alt="Rating Star" />
-              <span class="rating-score">4.8</span>
-              <span class="rating-count">(203 vlerësime)</span>
-            </div>
-
-            <div class="professional-card-footer">
-              <p class="professional-price">
-                nga <data class="price-amount" value="18">18€</data>
-              </p>
-
-              <button
-                class="professional-booking-button"
-                type="button"
-                aria-label="Rezervo Faton Gashin"
-              >
-                Rezervo
-              </button>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-bottom">
-          <p>&copy; 2026 Ndreqe</p>
-
-          <div class="social-links">
-            <a href="#" aria-label="Facebook">
-              <img src="./assets/icons/Facebook.svg" alt="Facebook" />
-            </a>
-            <a href="#" aria-label="Instagram">
-              <img src="./assets/icons/Instagram.svg" alt="Instagram" />
-            </a>
-            <a href="#" aria-label="LinkedIn">
-              <img src="./assets/icons/LinkedIn.svg" alt="LinkedIn" />
-            </a>
-          </div>
-        </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+
+</body>
 </html>
+
