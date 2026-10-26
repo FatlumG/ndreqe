@@ -1,8 +1,10 @@
+
 <!doctype html>
-<html lang="en">
+<html lang="sq">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/variables.css" />
@@ -13,19 +15,25 @@
     <header class="site-header">
       <div class="header-container">
         <div class="logo">
-          <img src="./assets/logos/logo.svg" alt="Logo" />
+          <a href="./index.html" aria-label="Ndreqe - Ballina">
+            <img src="./assets/logos/logo.svg" alt="Ndreqe Logo" />
+          </a>
           <h1>Ndreqe</h1>
         </div>
         <nav class="main-nav">
           <ul>
-            <li><a href="#">Shërbimet</a></li>
-            <li><a href="#">Si funksionon</a></li>
+            <li><a href="./index.html">Shërbimet</a></li>
+            <li>
+              <a href="./si-funksionon.html" aria-current="page">
+                Si funksionon
+              </a>
+            </li>
             <li><a href="#">Për profesionistët</a></li>
           </ul>
         </nav>
         <div class="header-actions">
           <a href="#" class="btn-login">Kyçu</a>
-          <a href="#" class="btn-primary">Rezervo</a>
+          <a href="./index.html" class="btn-primary">Rezervo</a>
         </div>
       </div>
     </header>
@@ -34,7 +42,6 @@
         <h1>Shërbimet</h1>
         <p>Zgjidh llojin e punës dhe shiko kush është i lirë afër teje.</p>
       </header>
-
       <div class="services-grid">
         <article>
           <img src="./assets/icons/div.svg" alt="Foto e logos" />
@@ -43,7 +50,6 @@
           <a href="#">Shiko profesionistët</a>
           <img src="./assets/icons/Frame.svg" alt="Shigjeta" />
         </article>
-
         <article>
           <img src="./assets/icons/div (1).svg" alt="Foto e logos" />
           <h2>Hidraulik</h2>
@@ -51,7 +57,6 @@
           <a href="#">Shiko profesionistët</a>
           <img src="./assets/icons/Frame.svg" alt="Shigjeta" />
         </article>
-
         <article>
           <img src="./assets/icons/div (2).svg" alt="Foto e logos" />
           <h2>Montues</h2>
@@ -59,7 +64,6 @@
           <a href="#">Shiko profesionistët</a>
           <img src="./assets/icons/Frame.svg" alt="Shigjeta" />
         </article>
-
         <article>
           <img src="./assets/icons/div (3).svg" alt="Foto e logos" />
           <h2>Pastrim</h2>
@@ -67,7 +71,6 @@
           <a href="#">Shiko profesionistët</a>
           <img src="./assets/icons/Frame.svg" alt="Shigjeta" />
         </article>
-
         <article>
           <img src="./assets/icons/div (4).svg" alt="Foto e logos" />
           <h2>Lyerje</h2>
@@ -75,7 +78,6 @@
           <a href="#">Shiko profesionistët</a>
           <img src="./assets/icons/Frame.svg" alt="Shigjeta" />
         </article>
-
         <article>
           <img src="./assets/icons/div (5).svg" alt="Foto e logos" />
           <h2>Mekanik</h2>
@@ -84,7 +86,192 @@
           <img src="./assets/icons/Frame.svg" alt="Shigjeta" />
         </article>
       </div>
-      <section class="top-rated-professionals-section">
+    <main class="how-it-works-page">
+      <section class="how-it-works-hero">
+        <div class="how-it-works-hero-content">
+          <p class="section-label">SI FUNKSIONON NDREQE</p>
+          <h2 class="how-it-works-title">
+            Shërbimi i duhur, në vetëm disa hapa.
+          </h2>
+          <p class="how-it-works-description">
+            Gjej profesionistë për nevojat e shtëpisë tënde.
+            Krahaso mundësitë dhe zgjidh shërbimin që të përshtatet.
+          </p>
+          <a href="./index.html" class="btn-primary">
+            Shiko profesionistët
+          </a>
+        </div>
+      </section>
+      <section
+        class="how-it-works-section"
+        aria-labelledby="steps-title"
+      >
+        <header class="section-header">
+          <h2 id="steps-title">Si funksionon procesi?</h2>
+          <p>Ndiqi këta tre hapa për të gjetur shërbimin që të duhet.</p>
+        </header>
+        <ol class="steps-list">
+          <li class="step-card">
+            <span class="step-number">01</span>
+            <h3 class="step-title">Zgjedh shërbimin</h3>
+            <p class="step-description">
+              Përcakto çfarë pune të duhet dhe kërko kategorinë
+              përkatëse të shërbimit.
+            </p>
+          </li>
+          <li class="step-card">
+            <span class="step-number">02</span>
+            <h3 class="step-title">Gjen profesionistin</h3>
+            <p class="step-description">
+              Shiko profilet, qytetet dhe vlerësimet për të krahasuar
+              profesionistët e disponueshëm.
+            </p>
+          </li>
+          <li class="step-card">
+            <span class="step-number">03</span>
+            <h3 class="step-title">Cakton termin</h3>
+            <p class="step-description">
+              Kontakto profesionistin që ke zgjedhur dhe cakto
+              kohën e përshtatshme për shërbimin.
+            </p>
+          </li>
+        </ol>
+      </section>
+      <section
+        class="services-overview-section"
+        aria-labelledby="services-title"
+      >
+        <header class="section-header">
+          <h2 id="services-title">Çfarë shërbimesh mund të gjesh?</h2>
+          <p>Zgjedh kategorinë që i përshtatet nevojës tënde.</p>
+        </header>
+        <ul class="services-list">
+          <li class="service-item">
+            <h3>Elektricist</h3>
+            <p>Për instalime dhe probleme elektrike.</p>
+          </li>
+          <li class="service-item">
+            <h3>Hidraulik</h3>
+            <p>Për ujësjellës, rubineta dhe rrjedhje uji.</p>
+          </li>
+          <li class="service-item">
+            <h3>Pastrim</h3>
+            <p>Për pastrimin dhe mirëmbajtjen e shtëpisë.</p>
+          </li>
+          <li class="service-item">
+            <h3>Riparime shtëpiake</h3>
+            <p>Për punë dhe rregullime të ndryshme në shtëpi.</p>
+          </li>
+        </ul>
+      </section>
+      <section
+        class="process-details-section"
+        aria-labelledby="process-title"
+      >
+        <header class="section-header">
+          <h2 id="process-title">Procesi në një tabelë</h2>
+          <p>Një përmbledhje e asaj që bën në secilin hap.</p>
+        </header>
+        <table class="process-table">
+          <thead>
+            <tr>
+              <th scope="col">Hapi</th>
+              <th scope="col">Veprimi yt</th>
+              <th scope="col">Qëllimi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Kërkimi</td>
+              <td>Zgjedh shërbimin dhe qytetin.</td>
+              <td>Gjen profesionistët përkatës.</td>
+            </tr>
+            <tr>
+              <td>2. Përzgjedhja</td>
+              <td>Krahason profilet dhe vlerësimet.</td>
+              <td>Zgjedh profesionistin e duhur.</td>
+            </tr>
+            <tr>
+              <td>3. Rezervimi</td>
+              <td>Kontakton profesionistin.</td>
+              <td>Cakton termin për shërbimin.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section
+        class="service-request-section"
+        aria-labelledby="request-title"
+      >
+        <header class="section-header">
+          <h2 id="request-title">Çfarë shërbimi të nevojitet?</h2>
+          <p>
+            Plotëso fushat më poshtë për të përshkruar kërkesën tënde.
+          </p>
+        </header>
+        <form
+          class="service-request-form"
+          action="#"
+          method="get"
+        >
+          <div class="form-group">
+            <label for="service-type">Lloji i shërbimit</label>
+            <select id="service-type" name="service-type" required>
+              <option value="">Zgjedh shërbimin</option>
+              <option value="elektricist">Elektricist</option>
+              <option value="hidraulik">Hidraulik</option>
+              <option value="pastrim">Pastrim</option>
+              <option value="riparime">Riparime shtëpiake</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="service-city">Qyteti</label>
+            <select id="service-city" name="service-city" required>
+              <option value="">Zgjedh qytetin</option>
+              <option value="prishtine">Prishtinë</option>
+              <option value="prizren">Prizren</option>
+              <option value="peje">Pejë</option>
+              <option value="gjakove">Gjakovë</option>
+              <option value="mitrovice">Mitrovicë</option>
+              <option value="gjilan">Gjilan</option>
+              <option value="ferizaj">Ferizaj</option>
+              <option value="viti">Viti</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="service-date">Data e preferuar</label>
+            <input
+              type="date"
+              id="service-date"
+              name="service-date"
+            />
+          </div>
+          <div class="form-group">
+            <label for="service-details">Përshkrimi i kërkesës</label>
+            <textarea
+              id="service-details"
+              name="service-details"
+              rows="4"
+              placeholder="Përshkruaj shkurt shërbimin që të nevojitet..."
+            ></textarea>
+          </div>
+          <button type="submit" class="btn-primary">
+            Dërgo kërkesën
+          </button>
+        </form>
+      </section>
+      <section class="how-it-works-cta">
+        <div class="cta-content">
+          <h2>Gati për të filluar?</h2>
+          <p>
+            Kthehu në ballinë dhe shiko profesionistët që mund të të ndihmojnë.
+          </p>
+          <a href="./index.html" class="btn-primary">
+            Kthehu në ballinë
+          </a>
+        </div>
+      </section>
+       <section class="top-rated-professionals-section">
         <header>
           <h2>Profesionistë të vlerësuar</h2>
           <a href="#">Shiko te gjithë</a>
@@ -157,9 +344,11 @@
             <a href="#" aria-label="Facebook">
               <img src="./assets/icons/Facebook.svg" alt="Facebook" />
             </a>
+
             <a href="#" aria-label="Instagram">
               <img src="./assets/icons/Instagram.svg" alt="Instagram" />
             </a>
+
             <a href="#" aria-label="LinkedIn">
               <img src="./assets/icons/LinkedIn.svg" alt="LinkedIn" />
             </a>
