@@ -1,0 +1,138 @@
+
+/* SERVICES SECTION */
+
+.services-container {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding: var(--space-7) var(--space-4);
+}
+
+/* Section heading */
+
+.services-container > header {
+  margin-bottom: var(--space-4);
+}
+
+.services-container > header h1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  color: var(--color-ink);
+  margin: 0 0 var(--space-2);
+}
+
+.services-container > header p {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-slate);
+  margin: 0;
+}
+
+/* Services grid */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+/* Service cards */
+
+.services-grid article {
+  display: grid;
+  grid-template-areas:
+    "icon icon"
+    "title title"
+    "description description"
+    "link arrow";
+  grid-template-columns: auto 1fr;
+  align-content: start;
+  row-gap: var(--space-2);
+
+  padding: var(--space-3);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    border-color var(--transition);
+}
+
+/* Card icon */
+
+.services-grid article img:first-child {
+  grid-area: icon;
+  width: 24px;
+  height: 24px;
+}
+
+/* Card title */
+
+.services-grid article h2 {
+  grid-area: title;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+  margin: 0;
+}
+
+/* Card description */
+
+.services-grid article p {
+  grid-area: description;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-slate);
+  margin: 0;
+}
+
+/* Card link */
+
+.services-grid article a {
+  grid-area: link;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  color: var(--color-indigo);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+/* Arrow icon */
+
+.services-grid article img:last-child {
+  grid-area: arrow;
+  width: 12px;
+  height: 12px;
+  align-self: center;
+}
+
+/* Hover effect */
+
+.services-grid article:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--color-periwinkle);
+}
+
+.services-grid article a:hover {
+  color: var(--color-indigo-dark);
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
