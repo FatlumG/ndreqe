@@ -13,7 +13,494 @@
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/pages/index.css" />
+    <link rel="stylesheet" href="./css/pages/mjeshtrit.css" />
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">
+          <img src="assets/logos/a.svg" alt="Logo" />
+        </a>
+
+        <ul class="nav-links">
+          <li>
+            <a href="mjeshtrit.html" class="active">Mjeshtrit</a>
+          </li>
+
+          <li>
+            <a href="si-funksionon.html">Si funksionon</a>
+          </li>
+
+          <li>
+            <a href="rezervimet.html">Rezervimet e mia</a>
+          </li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="login.html">Kyçu</a>
+          <a href="rezervo.html" class="btn-primary">Rezervo</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-intro">
+        <div class="breadcrumb">
+          <a href="index.html">Ballina</a>
+          <span>/</span>
+          <span>Mjeshtrit</span>
+        </div>
+
+        <h1>Gjej mjeshtrin e duhur</h1>
+
+        <p>
+          Mjeshtër të verifikuar me çmime të qarta dhe vlerësime të vërteta.
+        </p>
+
+        <form class="search-form" action="mjeshtrit.html" method="get">
+          <input
+            type="search"
+            name="search"
+            placeholder="Kërko sipas emrit ose shërbimit"
+            aria-label="Kërko mjeshtrin"
+          />
+
+          <button type="submit">Kërko</button>
+        </form>
+      </section>
+
+      <section class="professionals-section">
+        <div class="professionals-container">
+          <aside class="filters">
+            <h2>Filtrat</h2>
+
+            <form action="mjeshtrit.html" method="get">
+              <fieldset>
+                <legend>Shërbimi</legend>
+
+                <label>
+                  <input type="checkbox" name="category" value="hidraulik" />
+                  Hidraulik
+                </label>
+
+                <label>
+                  <input type="checkbox" name="category" value="elektricist" />
+                  Elektricist
+                </label>
+
+                <label>
+                  <input type="checkbox" name="category" value="montues" />
+                  Montues
+                </label>
+
+                <label>
+                  <input type="checkbox" name="category" value="pastrim" />
+                  Pastrim
+                </label>
+
+                <label>
+                  <input type="checkbox" name="category" value="lyerje" />
+                  Lyerje
+                </label>
+
+                <label>
+                  <input type="checkbox" name="category" value="mekanik" />
+                  Mekanik
+                </label>
+              </fieldset>
+
+              <fieldset>
+                <legend>Qyteti</legend>
+
+                <select name="city" aria-label="Zgjedh qytetin">
+                  <option value="">Të gjitha qytetet</option>
+                  <option value="prishtine">Prishtinë</option>
+                  <option value="prizren">Prizren</option>
+                  <option value="gjilan">Gjilan</option>
+                  <option value="peje">Pejë</option>
+                  <option value="ferizaj">Ferizaj</option>
+                  <option value="gjakove">Gjakovë</option>
+                  <option value="mitrovice">Mitrovicë</option>
+                </select>
+              </fieldset>
+
+              <fieldset>
+                <legend>Vlerësimi</legend>
+
+                <label>
+                  <input type="radio" name="rating" value="4.5" />
+                  4.5 e lart
+                </label>
+
+                <label>
+                  <input type="radio" name="rating" value="4" checked />
+                  4.0 e lart
+                </label>
+
+                <label>
+                  <input type="radio" name="rating" value="0" />
+                  Të gjitha
+                </label>
+              </fieldset>
+
+               <fieldset>
+                 <legend>
+                  Çmimi deri në <output id="price-value">100€</output>
+                 </legend>
+
+                   <input
+                    type="range"
+                    id="price"
+                    name="price"
+                    min="10"
+                    max="100"
+                    value="100"
+                    aria-label="Çmimi maksimal"
+                   />
+
+                    <div class="price-range">
+                       <span>10€</span>
+                       <span>100€</span>
+                     </div>
+               </fieldset>
+
+              <fieldset>
+                <label>
+                  <input type="checkbox" name="verified" value="true" />
+                  Vetëm të verifikuar
+                </label>
+              </fieldset>
+
+              <button type="submit" class="btn-primary">Apliko filtrat</button>
+
+              <a href="mjeshtrit.html" class="clear-filters">
+                Pastro filtrat
+              </a>
+            </form>
+          </aside>
+
+          <div class="professionals-results">
+            <div class="results-toolbar">
+              <p class="results-count">
+                <strong>48 mjeshtër u gjetën</strong>
+              </p>
+
+              <div class="sort-options">
+                <label for="sort">Rendit sipas</label>
+
+                <select id="sort" name="sort">
+                  <option value="rating">Vlerësimi më i lartë</option>
+
+                  <option value="price-low">Çmimi më i ulët</option>
+
+                  <option value="price-high">Çmimi më i lartë</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="active-filters">
+              <span class="filter-tag">
+                4.0 e lart
+                <button type="button" aria-label="Largo filtrin">×</button>
+              </span>
+
+              <span class="filter-tag">
+                Të verifikuar
+                <button type="button" aria-label="Largo filtrin">×</button>
+              </span>
+
+              <a href="mjeshtrit.html" class="clear-filters"
+                >Pastro të gjitha</a
+              >
+            </div>
+
+           <div class="professionals-grid">
+  <article
+    class="professional-card"
+    data-category="pastrim"
+    data-city="prizren"
+    data-rating="5.0"
+    data-price="12"
+  >
+    <div class="professional-info">
+      <div class="professional-avatar">DB</div>
+
+      <div>
+        <h2>Drita Berisha</h2>
+        <span class="verified-badge">✓ I verifikuar</span>
+        <p>Pastrim · Prizren</p>
+        <p class="rating">★ 5.0 · 86 vlerësime</p>
+      </div>
+    </div>
+
+    <p class="professional-tags">Pastrim i thellë · Produkte eko</p>
+
+    <div class="professional-footer">
+      <p>Nga <strong>12€</strong></p>
+      <a href="profili.html">Shiko profilin</a>
+      <a href="rezervo.html" class="btn-primary">Rezervo</a>
+    </div>
+  </article>
+
+  <article
+    class="professional-card"
+    data-category="elektricist"
+    data-city="prishtine"
+    data-rating="4.9"
+    data-price="15"
+  >
+    <div class="professional-info">
+      <div class="professional-avatar">AK</div>
+
+      <div>
+        <h2>Arben Krasniqi</h2>
+        <span class="verified-badge">✓ I verifikuar</span>
+        <p>Elektricist · Prishtinë</p>
+        <p class="rating">★ 4.9 · 127 vlerësime</p>
+      </div>
+    </div>
+
+    <p class="professional-tags">Urgjenca · Furnizim</p>
+
+    <div class="professional-footer">
+      <p>Nga <strong>15€</strong></p>
+      <a href="profili.html">Shiko profilin</a>
+      <a href="rezervo.html" class="btn-primary">Rezervo</a>
+    </div>
+  </article>
+
+  <article
+    class="professional-card"
+    data-category="hidraulik"
+    data-city="gjilan"
+    data-rating="4.9"
+    data-price="14"
+  >
+    <div class="professional-info">
+      <div class="professional-avatar">TR</div>
+
+      <div>
+        <h2>Teuta Rexhepi</h2>
+        <span class="verified-badge">✓ I verifikuar</span>
+        <p>Hidraulik · Gjilan</p>
+        <p class="rating">★ 4.9 · 77 vlerësime</p>
+      </div>
+    </div>
+
+    <p class="professional-tags">Zyra · Furnizim</p>
+
+    <div class="professional-footer">
+      <p>Nga <strong>14€</strong></p>
+      <a href="profili.html">Shiko profilin</a>
+      <a href="rezervo.html" class="btn-primary">Rezervo</a>
+    </div>
+  </article>
+
+  <article
+    class="professional-card"
+    data-category="hidraulik"
+    data-city="peje"
+    data-rating="4.8"
+    data-price="18"
+  >
+    <div class="professional-info">
+      <div class="professional-avatar">FG</div>
+
+      <div>
+        <h2>Faton Gashi</h2>
+        <span class="verified-badge">✓ I verifikuar</span>
+        <p>Hidraulik · Pejë</p>
+        <p class="rating">★ 4.8 · 203 vlerësime</p>
+      </div>
+    </div>
+
+    <p class="professional-tags">Urgjenca · Boiler</p>
+
+    <div class="professional-footer">
+      <p>Nga <strong>18€</strong></p>
+      <a href="profili.html">Shiko profilin</a>
+      <a href="rezervo.html" class="btn-primary">Rezervo</a>
+    </div>
+  </article>
+
+  <article
+    class="professional-card"
+    data-category="mekanik"
+    data-city="ferizaj"
+    data-rating="4.8"
+    data-price="30"
+  >
+    <div class="professional-info">
+      <div class="professional-avatar">IM</div>
+
+      <div>
+        <h2>Ilir Morina</h2>
+        <span class="verified-badge">✓ I verifikuar</span>
+        <p>Mekanik · Ferizaj</p>
+        <p class="rating">★ 4.8 · 141 vlerësime</p>
+      </div>
+    </div>
+
+    <p class="professional-tags">Në vend · Diagnostikim</p>
+
+    <div class="professional-footer">
+      <p>Nga <strong>30€</strong></p>
+      <a href="profili.html">Shiko profilin</a>
+      <a href="rezervo.html" class="btn-primary">Rezervo</a>
+    </div>
+  </article>
+
+  <article
+    class="professional-card"
+    data-category="montues"
+    data-city="prishtine"
+    data-rating="4.7"
+    data-price="20"
+  >
+    <div class="professional-info">
+      <div class="professional-avatar">BH</div>
+
+      <div>
+        <h2>Blerim Hoxha</h2>
+        <span class="verified-badge">✓ I verifikuar</span>
+        <p>Montues · Prishtinë</p>
+        <p class="rating">★ 4.7 · 64 vlerësime</p>
+      </div>
+    </div>
+
+    <p class="professional-tags">Mobilje · Furnizim</p>
+
+    <div class="professional-footer">
+      <p>Nga <strong>20€</strong></p>
+      <a href="profili.html">Shiko profilin</a>
+      <a href="rezervo.html" class="btn-primary">Rezervo</a>
+    </div>
+  </article>
+
+  <article
+    class="professional-card"
+    data-category="lyerje"
+    data-city="gjakove"
+    data-rating="4.6"
+    data-price="25"
+  >
+    <div class="professional-info">
+      <div class="professional-avatar">AB</div>
+
+      <div>
+        <h2>Artan Bajrami</h2>
+        <span class="verified-badge">✓ I verifikuar</span>
+        <p>Lyerje · Gjakovë</p>
+        <p class="rating">★ 4.6 · 52 vlerësime</p>
+      </div>
+    </div>
+
+    <p class="professional-tags">Lyerje e brendshme · Riparime</p>
+
+    <div class="professional-footer">
+      <p>Nga <strong>25€</strong></p>
+      <a href="profili.html">Shiko profilin</a>
+      <a href="rezervo.html" class="btn-primary">Rezervo</a>
+    </div>
+  </article>
+
+  <article
+    class="professional-card"
+    data-category="pastrim"
+    data-city="mitrovice"
+    data-rating="4.5"
+    data-price="16"
+  >
+    <div class="professional-info">
+      <div class="professional-avatar">ES</div>
+
+      <div>
+        <h2>Elda Shala</h2>
+        <span class="verified-badge">✓ I verifikuar</span>
+        <p>Pastrim · Mitrovicë</p>
+        <p class="rating">★ 4.5 · 39 vlerësime</p>
+      </div>
+    </div>
+
+    <p class="professional-tags">
+      Pastrim shtëpie · Pastrim pas renovimit
+    </p>
+
+    <div class="professional-footer">
+      <p>Nga <strong>16€</strong></p>
+      <a href="profili.html">Shiko profilin</a>
+      <a href="rezervo.html" class="btn-primary">Rezervo</a>
+    </div>
+  </article>
+</div>
+
+<div class="empty-state" hidden>
+  <h2>Nuk u gjet asnjë mjeshtër</h2>
+  <p>Provo të ndryshosh filtrat ose kërko me një shërbim tjetër.</p>
+  <a href="mjeshtrit.html">Pastro filtrat</a>
+</div>
+
+<button type="button" class="load-more">Shfaq më shumë</button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="assets/logos/a.svg" alt="Ndreqe Logo" />
+          </a>
+
+          <p>Profesionistë të besuar për shtëpinë tënde, në gjithë Kosovën.</p>
+        </div>
+
+        <div class="footer-column">
+          <h2>Kompania</h2>
+          <ul>
+            <li><a href="about.html">Rreth nesh</a></li>
+            <li><a href="careers.html">Karriera</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h2>Shërbimet</h2>
+          <ul>
+            <li><a href="mjeshtrit.html">Elektricist</a></li>
+            <li><a href="mjeshtrit.html">Hidraulik</a></li>
+            <li><a href="mjeshtrit.html">Pastrim</a></li>
+            <li><a href="mjeshtrit.html">Lyerje</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h2>Ndihma</h2>
+          <ul>
+            <li><a href="faq.html">Pyetje të shpeshta</a></li>
+            <li><a href="terms.html">Kushtet e përdorimit</a></li>
+            <li><a href="privacy.html">Privatësia</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Ndreqe</p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <img src="assets/icons/instagram.svg" alt="Instagram" />
+          </a>
+
+          <a href="#" aria-label="Facebook">
+            <img src="assets/icons/facebook.svg" alt="Facebook" />
+          </a>
+
+          <a href="#" aria-label="LinkedIn">
+            <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
