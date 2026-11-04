@@ -13,7 +13,289 @@
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/pages/index.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/pages/rezervo.css" />
+    <title>Rezervo mjeshtrin | Ndreqe</title>
   </head>
-  <body></body>
+  <body>
+    <header class="site-header">
+      <div class="booking-container navbar">
+        <a href="index.html" class="logo">
+        <img src="assets/logos/a.svg" alt="Ndreqe Logo" />
+        </a>
+
+        <nav class="main-nav">
+          <a href="mjeshtrit.html">Mjeshtrit</a>
+          <a href="si-funksionon.html">Si funksionon</a>
+          <a href="rezervimet.html">Rezervimet e mia</a>
+        </nav>
+
+        <div class="nav-actions">
+          <a href="kycu.html" class="login-link">Kyçu</a>
+          <a href="rezervo.html" class="btn-primary nav-btn">Rezervo</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="booking-container booking-main">
+      <div class="breadcrumb">
+        <a href="index.html">Ballina</a>
+        <span>/</span>
+        <a href="mjeshtrit.html">Mjeshtrit</a>
+        <span>/</span>
+        <a href="profili.html">Arben Krasniqi</a>
+        <span>/</span>
+        <span class="current-page">Rezervo</span>
+      </div>
+
+      <h1>Rezervo mjeshtrin</h1>
+
+      <div class="booking-steps">
+        <div class="step active">
+          <span class="step-number">1</span>
+          <span>Shërbimi dhe orari</span>
+        </div>
+
+        <span class="step-line"></span>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <span>Të dhënat e tua</span>
+        </div>
+
+        <span class="step-line"></span>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <span>Konfirmimi</span>
+        </div>
+      </div>
+
+      <div class="booking-layout">
+        <section class="booking-form-card">
+          <h2>Shërbimi dhe orari</h2>
+
+          <form action="#" method="post">
+            <div class="form-group">
+              <label for="service">Shërbimi</label>
+
+              <select id="service" name="service" required>
+                <option value="">Zgjedh shërbimin</option>
+                <option value="nderrim-rubineti" selected>
+                  Ndërrim rubineti - 15€
+                </option>
+                <option value="instalim">Instalim pajisjesh</option>
+                <option value="riparim">Riparim hidraulik</option>
+              </select>
+            </div>
+
+            <div class="form-group date-group">
+              <label for="booking-date">Data</label>
+
+              <input
+                type="date"
+                id="booking-date"
+                name="booking-date"
+                min="2026-11-04"
+                required
+              />
+            </div>
+
+            <fieldset class="form-group time-group">
+              <legend>Ora</legend>
+
+              <div class="time-slots">
+                <input
+                  type="radio"
+                  id="time-0900"
+                  name="booking-time"
+                  value="09:00"
+                  required
+                />
+                <label for="time-0900">09:00</label>
+
+                <input
+                  type="radio"
+                  id="time-1030"
+                  name="booking-time"
+                  value="10:30"
+                  checked
+                />
+                <label for="time-1030">10:30</label>
+
+                <input
+                  type="radio"
+                  id="time-1200"
+                  name="booking-time"
+                  value="12:00"
+                  disabled
+                />
+                <label for="time-1200">12:00</label>
+
+                <input
+                  type="radio"
+                  id="time-1430"
+                  name="booking-time"
+                  value="14:30"
+                />
+                <label for="time-1430">14:30</label>
+
+                <input
+                  type="radio"
+                  id="time-1600"
+                  name="booking-time"
+                  value="16:00"
+                />
+                <label for="time-1600">16:00</label>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <label for="problem">Përshkruaj problemin</label>
+
+              <textarea
+                id="problem"
+                name="problem"
+                rows="4"
+                maxlength="300"
+                minlength="10"
+                placeholder="p.sh. Rubineti i kuzhinës pikon edhe kur është i mbyllur."
+                required
+              ></textarea>
+
+              <div class="textarea-info">
+                <small>Sa më shumë detaje, aq më i saktë çmimi.</small>
+                <small>0 / 300</small>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <a href="profili.html" class="btn-back"> Kthehu </a>
+
+              <button type="submit" class="btn-primary">Vazhdo</button>
+            </div>
+          </form>
+        </section>
+
+        <aside class="booking-summary">
+          <div class="summary-profile">
+            <div class="profile-avatar">AK</div>
+
+            <div class="profile-info">
+              <div class="profile-name">
+                Arben Krasniqi
+
+                <span class="verified">✓ I verifikuar</span>
+              </div>
+
+              <div class="profile-rating">Hidraulik · <span>★</span> 4.9</div>
+            </div>
+          </div>
+
+          <div class="summary-details">
+            <div class="summary-row">
+              <span>Shërbimi</span>
+              <strong>Ndërrim rubineti</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Data</span>
+              <strong>E enjte, 22 tetor</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Ora</span>
+              <strong>10:30</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Adresa</span>
+              <strong>—</strong>
+            </div>
+          </div>
+
+          <div class="summary-price">
+            <span>Çmimi nga</span>
+            <strong>15€</strong>
+          </div>
+
+          <div class="summary-notice">
+            <img src="assets/icons/tick2.svg" alt="Konfirmuar" />
+
+            <p>
+              Pagesën për tani ia kryeni punën. Anulim falas deri 2 orë para.
+            </p>
+          </div>
+        </aside>
+      </div>
+
+      <section class="confirmation-block" hidden>
+        <div class="confirmation-icon">✓</div>
+
+        <h2>Rezervimi u përfundua!</h2>
+
+        <p>Kërkesa juaj për rezervim është regjistruar me sukses.</p>
+
+        <a href="rezervimet.html" class="btn-primary">
+          Shiko rezervimet e mia
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="booking-container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">
+              <img src="assets/logos/a.svg" alt="Ndreqe Logo" />
+            </a>
+
+            <p>
+              Profesionistë të besuar për shtëpinë tënde, në gjithë Kosovën.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h4>Kompania</h4>
+            <a href="#">Rreth nesh</a>
+            <a href="#">Karriera</a>
+            <a href="#">Kontakt</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Shërbimet</h4>
+            <a href="#">Elektricist</a>
+            <a href="#">Hidraulik</a>
+            <a href="#">Pastrimi</a>
+            <a href="#">Lyreje</a>
+          </div>
+
+          <div class="footer-column">
+            <h4>Ndihma</h4>
+            <a href="#">Pyetje të shpeshta</a>
+            <a href="#">Kushtet e përdorimit</a>
+            <a href="#">Privatësia</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Ndreqe</p>
+
+         <div class="social-links">
+          <a href="#" aria-label="Facebook">
+          <img src="assets/icons/facebook.svg" alt="Facebook" />
+          </a>
+
+          <a href="#" aria-label="Instagram">
+          <img src="assets/icons/instagram.svg" alt="Instagram" />
+          </a>
+
+          <a href="#" aria-label="LinkedIn">
+          <img src="assets/icons/linkedin.svg" alt="LinkedIn" />
+          </a>
+         </div>
+        </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
