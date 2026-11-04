@@ -1,19 +1,306 @@
+
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="stylesheet" href="./css/variables.css" />
-    <link rel="stylesheet" href="./css/pages/index.css" />
-    <title>Document</title>
-  </head>
-  <body></body>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/pages/rezervimet.css">
+
+  <title>Rezervimet e mia | Ndreqe</title>
+</head>
+
+
+<body>
+  <main class="reservations-container">
+
+    <!-- Page heading -->
+    <section class="reservations-heading">
+      <div>
+        <span class="page-eyebrow">LLOGARIA IME</span>
+        <h1>Rezervimet e mia</h1>
+        <p>Menaxho rezervimet e tua në një vend.</p>
+      </div>
+
+      <a href="./index.html" class="back-link">
+        &larr; Kthehu në ballinë
+      </a>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats-grid" aria-label="Statistikat e rezervimeve">
+
+      <article class="stat-card">
+        <div class="stat-icon upcoming-icon" aria-hidden="true">◷</div>
+        <div>
+          <p class="stat-label">Të ardhshme</p>
+          <p class="stat-number">2</p>
+          <span class="stat-description">Rezervime aktive</span>
+        </div>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon completed-icon" aria-hidden="true">✓</div>
+        <div>
+          <p class="stat-label">Të kryera</p>
+          <p class="stat-number">5</p>
+          <span class="stat-description">Shërbime të përfunduara</span>
+        </div>
+      </article>
+
+      <article class="stat-card">
+        <div class="stat-icon cancelled-icon" aria-hidden="true">×</div>
+        <div>
+          <p class="stat-label">Të anuluara</p>
+          <p class="stat-number">1</p>
+          <span class="stat-description">Rezervime të anuluara</span>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Reservations -->
+    <section class="reservations-section">
+
+      <div class="section-heading">
+        <div>
+          <h2>Lista e rezervimeve</h2>
+          <p>Shiko dhe menaxho rezervimet e tua.</p>
+        </div>
+      </div>
+
+      <!-- Static tabs -->
+      <nav class="reservation-tabs" aria-label="Filtro rezervimet">
+        <button type="button" class="tab-button active" aria-current="page">
+          Të gjitha <span>5</span>
+        </button>
+
+        <button type="button" class="tab-button">
+          Të ardhshme
+        </button>
+
+        <button type="button" class="tab-button">
+          Të kryera
+        </button>
+
+        <button type="button" class="tab-button">
+          Të anuluara
+        </button>
+      </nav>
+
+      <!-- Search -->
+      <div class="search-wrapper">
+        <label for="reservation-search" class="visually-hidden">
+          Kërko rezervim
+        </label>
+
+        <span class="search-icon" aria-hidden="true">⌕</span>
+
+        <input
+          type="search"
+          id="reservation-search"
+          class="reservation-search"
+          placeholder="Kërko sipas shërbimit ose mjeshtrit..."
+        >
+      </div>
+
+      <!-- Reservations table -->
+      <div class="table-wrapper">
+        <table class="reservations-table">
+
+          <thead>
+            <tr>
+              <th scope="col">Shërbimi</th>
+              <th scope="col">Mjeshtri</th>
+              <th scope="col">Data dhe ora</th>
+              <th scope="col">Lokacioni</th>
+              <th scope="col">Statusi</th>
+              <th scope="col">Veprimet</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td data-label="Shërbimi">
+                <span class="service-name">Riparime elektrike</span>
+                <span class="booking-id">#001</span>
+              </td>
+
+              <td data-label="Mjeshtri">Arben Krasniqi</td>
+
+              <td data-label="Data dhe ora">
+                08.11.2026
+                <span class="cell-secondary">10:00</span>
+              </td>
+
+              <td data-label="Lokacioni">Prishtinë</td>
+
+              <td data-label="Statusi">
+                <span class="status-badge status-upcoming">
+                  <span class="status-dot"></span>
+                  Në pritje
+                </span>
+              </td>
+
+              <td data-label="Veprimet">
+                <div class="action-buttons">
+                  <button type="button" class="action-button details-button">
+                    Detajet
+                  </button>
+                  <button type="button" class="action-button cancel-button">
+                    Anulo
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="Shërbimi">
+                <span class="service-name">Instalime hidraulike</span>
+                <span class="booking-id">#002</span>
+              </td>
+
+              <td data-label="Mjeshtri">Besnik Gashi</td>
+
+              <td data-label="Data dhe ora">
+                10.11.2026
+                <span class="cell-secondary">14:30</span>
+              </td>
+
+              <td data-label="Lokacioni">Prishtinë</td>
+
+              <td data-label="Statusi">
+                <span class="status-badge status-upcoming">
+                  <span class="status-dot"></span>
+                  Në pritje
+                </span>
+              </td>
+
+              <td data-label="Veprimet">
+                <div class="action-buttons">
+                  <button type="button" class="action-button details-button">
+                    Detajet
+                  </button>
+                  <button type="button" class="action-button cancel-button">
+                    Anulo
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="Shërbimi">
+                <span class="service-name">Lyerje e mureve</span>
+                <span class="booking-id">#003</span>
+              </td>
+
+              <td data-label="Mjeshtri">Ilir Berisha</td>
+
+              <td data-label="Data dhe ora">
+                25.10.2026
+                <span class="cell-secondary">09:00</span>
+              </td>
+
+              <td data-label="Lokacioni">Viti</td>
+
+              <td data-label="Statusi">
+                <span class="status-badge status-completed">
+                  <span class="status-dot"></span>
+                  E përfunduar
+                </span>
+              </td>
+
+              <td data-label="Veprimet">
+                <div class="action-buttons">
+                  <button type="button" class="action-button details-button">
+                    Detajet
+                  </button>
+                  <button type="button" class="action-button review-button">
+                    Lër vlerësim
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="Shërbimi">
+                <span class="service-name">Montim mobiliesh</span>
+                <span class="booking-id">#004</span>
+              </td>
+
+              <td data-label="Mjeshtri">Driton Shala</td>
+
+              <td data-label="Data dhe ora">
+                20.10.2026
+                <span class="cell-secondary">12:00</span>
+              </td>
+
+              <td data-label="Lokacioni">Prishtinë</td>
+
+              <td data-label="Statusi">
+                <span class="status-badge status-completed">
+                  <span class="status-dot"></span>
+                  E përfunduar
+                </span>
+              </td>
+
+              <td data-label="Veprimet">
+                <div class="action-buttons">
+                  <button type="button" class="action-button details-button">
+                    Detajet
+                  </button>
+                  <button type="button" class="action-button review-button">
+                    Lër vlerësim
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td data-label="Shërbimi">
+                <span class="service-name">Riparim pajisjesh</span>
+                <span class="booking-id">#005</span>
+              </td>
+
+              <td data-label="Mjeshtri">Valon Hoxha</td>
+
+              <td data-label="Data dhe ora">
+                15.10.2026
+                <span class="cell-secondary">11:00</span>
+              </td>
+
+              <td data-label="Lokacioni">Viti</td>
+
+              <td data-label="Statusi">
+                <span class="status-badge status-cancelled">
+                  <span class="status-dot"></span>
+                  E anuluar
+                </span>
+              </td>
+
+              <td data-label="Veprimet">
+                <div class="action-buttons">
+                  <button type="button" class="action-button details-button">
+                    Detajet
+                  </button>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <p class="table-note">
+        Po shfaqen 5 rezervime shembull.
+      </p>
+
+    </section>
+
+  </main>
+</body>
 </html>
