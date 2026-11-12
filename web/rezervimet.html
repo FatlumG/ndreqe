@@ -1,10 +1,19 @@
-
 <!doctype html>
 <html lang="sq">
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Files -->
   <link rel="stylesheet" href="./css/variables.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/layout.css">
@@ -15,6 +24,30 @@
 
 
 <body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="./index.html" aria-label="Ndreqe - Ballina">
+          <img src="./assets/logos/logo.svg" alt="Ndreqe Logo" />
+        </a>
+        <h1>Ndreqe</h1>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="./index.html">Shërbimet</a></li>
+          <li><a href="./si-funksionon.html">Si funksionon</a></li>
+          <li><a href="#">Për profesionistët</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#" class="btn-login">Kyçu</a>
+        <a href="./index.html" class="btn-primary">Rezervo</a>
+      </div>
+    </div>
+  </header>
+
   <main class="reservations-container">
 
     <!-- Page heading -->
@@ -30,37 +63,9 @@
       </a>
     </section>
 
-    <!-- Statistics -->
-    <section class="stats-grid" aria-label="Statistikat e rezervimeve">
 
-      <article class="stat-card">
-        <div class="stat-icon upcoming-icon" aria-hidden="true">◷</div>
-        <div>
-          <p class="stat-label">Të ardhshme</p>
-          <p class="stat-number">2</p>
-          <span class="stat-description">Rezervime aktive</span>
-        </div>
-      </article>
 
-      <article class="stat-card">
-        <div class="stat-icon completed-icon" aria-hidden="true">✓</div>
-        <div>
-          <p class="stat-label">Të kryera</p>
-          <p class="stat-number">5</p>
-          <span class="stat-description">Shërbime të përfunduara</span>
-        </div>
-      </article>
 
-      <article class="stat-card">
-        <div class="stat-icon cancelled-icon" aria-hidden="true">×</div>
-        <div>
-          <p class="stat-label">Të anuluara</p>
-          <p class="stat-number">1</p>
-          <span class="stat-description">Rezervime të anuluara</span>
-        </div>
-      </article>
-
-    </section>
 
     <!-- Reservations -->
     <section class="reservations-section">
@@ -72,24 +77,24 @@
         </div>
       </div>
 
-      <!-- Static tabs -->
-      <nav class="reservation-tabs" aria-label="Filtro rezervimet">
-        <button type="button" class="tab-button active" aria-current="page">
+      <!-- Reservation filters -->
+      <div class="reservation-tabs" role="group" aria-label="Filtro rezervimet">
+        <button type="button" class="tab-button active" aria-pressed="true">
           Të gjitha <span>5</span>
         </button>
 
-        <button type="button" class="tab-button">
+        <button type="button" class="tab-button" aria-pressed="false">
           Të ardhshme
         </button>
 
-        <button type="button" class="tab-button">
+        <button type="button" class="tab-button" aria-pressed="false">
           Të kryera
         </button>
 
-        <button type="button" class="tab-button">
+        <button type="button" class="tab-button" aria-pressed="false">
           Të anuluara
         </button>
-      </nav>
+      </div>
 
       <!-- Search -->
       <div class="search-wrapper">
@@ -99,12 +104,8 @@
 
         <span class="search-icon" aria-hidden="true">⌕</span>
 
-        <input
-          type="search"
-          id="reservation-search"
-          class="reservation-search"
-          placeholder="Kërko sipas shërbimit ose mjeshtrit..."
-        >
+        <input type="search" id="reservation-search" class="reservation-search"
+          placeholder="Kërko sipas shërbimit ose mjeshtrit...">
       </div>
 
       <!-- Reservations table -->
@@ -302,5 +303,28 @@
     </section>
 
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ndreqe</p>
+
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">
+            <img src="./assets/icons/Facebook.svg" alt="Facebook" />
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            <img src="./assets/icons/Instagram.svg" alt="Instagram" />
+          </a>
+
+          <a href="#" aria-label="LinkedIn">
+            <img src="./assets/icons/LinkedIn.svg" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
